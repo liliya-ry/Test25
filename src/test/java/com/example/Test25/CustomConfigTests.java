@@ -4,8 +4,7 @@ import static org.junit.jupiter.api.Assertions.*;
 
 import com.example.Test25.config.Config;
 import org.junit.jupiter.api.*;
-import org.springframework.beans.factory.NoSuchBeanDefinitionException;
-import org.springframework.beans.factory.NoUniqueBeanDefinitionException;
+import org.springframework.beans.factory.*;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
@@ -83,11 +82,5 @@ class CustomConfigTests {
     @Test
     void twoBeansForClass() {
         assertThrows(NoUniqueBeanDefinitionException.class, () -> context.getBean(Store.class));
-    }
-
-    @Test
-    void test1() {
-        Person person = context.getBean(Person.class);
-        System.out.println(person.firstName);
     }
 }

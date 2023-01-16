@@ -1,12 +1,14 @@
-package com.example.Test25.config;
+package com.example.Test25.test_classes.config;
 
-import com.example.Test25.Author;
-import com.example.Test25.Book;
-import com.example.Test25.Publisher;
-import com.example.Test25.SomeClass;
+import com.example.Test25.test_classes.Author;
+import com.example.Test25.test_classes.Book;
+import com.example.Test25.test_classes.Publisher;
+import com.example.Test25.test_classes.SomeClass;
 import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 
+@ComponentScan("test_classes")
 @Configuration
 public class Config2 {
     @Bean

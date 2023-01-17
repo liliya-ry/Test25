@@ -5,6 +5,10 @@ import org.springframework.stereotype.Component;
 
 @Component
 public class A {
-    @Autowired
     public static B bField;
+
+    @Autowired
+    public void setbField(B bField) {
+        A.bField = bField;
+    }
 }
